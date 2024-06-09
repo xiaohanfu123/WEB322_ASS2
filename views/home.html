@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <!--Why it's not ../public/css/main.css   Because Express has
+         configured all static root directory to 'public'-->
+</head>
+
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+
+            <a class="btn btn-ghost normal-case text-xl" href="\" title="Go to Lego Collection">Lego Collection</a>
+            <!-- <title> tag can't work over a link. Should add attributes -->
+        </div>
+
+        <div class="navbar-center flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="/about">About</a></li>
+                <li>
+                    <details>
+                        <summary>someTheme</summary>
+                        <ul class="p-2 bg-base-100 right-0">
+                            <li><a href="/lego/sets?theme=Icons">Icons</a></li>
+                            <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                            <li><a href="/lego/sets?theme=Early Creator">Early Creator</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mx-auto">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="img/home.png" class="max-w-sm rounded-lg" />
+                <div>
+                    <h1 class="text-5xl font-bold">Welcome
+                    </h1>
+                    <p class="py-6">Unleash your inner builder and embark on a fascinating journey through the colorful realm of Lego.</p>
+                    <a class="btn btn-primary" href="/lego/sets">VIEW ALL SETS</a>
+                </div>
+            </div>
+        </div>
+        <!-- GRID SYSTEM -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- CARD1 -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="https://cdn.rebrickable.com/media/thumbs/sets/002253963-1/100555.jpg/1000x800p.jpg?1665157588.5773187"
+                        alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Legend of Chima: Corbeaux et Gorilles</h2>
+                    <p>Title translates as: Ravens and Gorillas
+
+                        French: Corbeaux et Gorilles
+                        Polish: Kruki i Goryle</p>
+                    <div class="card-actions">
+                        <a class="btn btn-primary" href="/lego/sets/002253963-1">VIEW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD2 -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="https://cdn.rebrickable.com/media/thumbs/sets/0241187567-1/73972.jpg/1000x800p.jpg?1651425665.8903272"
+                        alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Ninjago: Build Your Own Adventure</h2>
+                    <p>Written by Scarlett O'Hara
+                        Hardcover: 80 pages
+                        Publisher: Dorling Kindersley (August 2015)
+                        Language: English
+                        ISBN-10: 0241187567
+                        ISBN-13: 9780241187562
+
+                        Parts supplied in a polybag numbered 11909</p>
+                    <div class="card-actions">
+                        <a class="btn btn-primary" href="/lego/sets/0241187567-1">VIEW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD3 -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="https://cdn.rebrickable.com/media/thumbs/sets/010423-1/119487.jpg/1000x800p.jpg?1680346276.469241"
+                        alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">The Majestic Horse</h2>
+                    <p>Designed by previous 2017 Lego Masters UK winners Nathan Dias and Steve Guinness.
+                        Given to select members of the Recognised Lego Fan Media group for an April fools prank in 2023,
+                        only around 10 are known to exist.
+                        Although pictures show box art for this set, it was received in a clear plastic bag in a
+                        standard box. Building instructions were locked with a password and unprintable so will likely
+                        never be available to the public.
+                        Some sets were received with 4 red 25269 and some had 4 dark red 25269.</p>
+                    <div class="card-actions">
+                        <a class="btn btn-primary" href="/lego/sets/010423-1">VIEW</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

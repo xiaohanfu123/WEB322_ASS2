@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/css/main.css" /> 
+</head>
+<body>
+    <!--NAV BAR-->
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+
+            <a class="btn btn-ghost normal-case text-xl" href="\" title="Go to Lego Collection">Lego Collection</a>
+            <!-- <title> tag can't work over a link. Should add attributes -->
+        </div>
+
+        <div class="navbar-center flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a class="active" href="/about">About</a></li>
+                <li>
+                    <details>
+                        <summary>someTheme</summary>
+                        <ul class="p-2 bg-base-100 right-0">
+                            <li><a href="/lego/sets?theme=Icons">Icons</a></li>
+                            <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                            <li><a href="/lego/sets?theme=Early Creator">Early Creator</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mx-auto">
+            <!-- Grid system -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <!-- CARD1 -->
+            <div class="hero min-h-screen" style="background-image: url('img/rick-y-morty-seeklogo.png');">
+                <div class="bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                  </div>
+                </div>
+              </div>
+            <!-- CARD2 -->
+            <div class="hero min-h-screen bg-base-200">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <img src="img/aboutMe.png" class="max-w-sm rounded-lg" />
+                  <div>
+                    <h1 class="text-5xl font-bold">About Me</h1>
+                    <p class="py-6">nothing special</p>
+                  </div>
+                </div>
+              </div>
+        
+        </div>
+    </div>
+</body>
+</html>

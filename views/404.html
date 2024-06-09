@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="/css/main.css" /> 
+</head>
+<body>
+        <!--NAV BAR-->
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+    
+                <a class="btn btn-ghost normal-case text-xl" href="\" title="Go to Lego Collection">Lego Collection</a>
+                <!-- <title> tag can't work over a link. Should add attributes -->
+            </div>
+    
+            <div class="navbar-center flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="active" href="/about">About</a></li>
+                    <li>
+                        <details>
+                            <summary>someTheme</summary>
+                            <ul class="p-2 bg-base-100 right-0">
+                                <li><a href="/lego/sets?theme=Icons">Icons</a></li>
+                                <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                                <li><a href="/lego/sets?theme=Early Creator">Early Creator</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+<!--404-->
+        <div class="hero min-h-screen" style="background-image: url(https://www.lego.com/cdn/cs/local-news/assets/blt85e9337b7a539d97/404.jpg?disable=upscale&width=1056&quality=50);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">404 NOT FOUND</h1>
+                <p class="mb-5">Go find something else!</p>
+                <a class="btn btn-primary" href="/">Back to Home</a>
+              </div>
+            </div>
+          </div>
+    
+</body>
+</html>
