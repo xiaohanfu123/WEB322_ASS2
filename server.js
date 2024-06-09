@@ -6,7 +6,7 @@
  *
  * https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
  *
- * Name: ___HANFU XIAO______ Student ID: ____033503145__________ Date: ___5/30/2024___________
+ * Name: ___HANFU XIAO______ Student ID: ____033503145__________ Date: ___6/9/2024___________
  *
  * Published URL: ______https://web-322-ass-2.vercel.app/_____________
  ********************************************************************************/
@@ -14,9 +14,9 @@
 const legoData = require("./modules/legoSets");
 const express = require("express");
 const app = express();
-app.use(express.static("public"));
-
 const path = require("path");
+
+app.use(express.static(path.join(__dirname, 'public')));
 legoData.initialize();
 const HTTP_PORT = 3000;
 
@@ -66,3 +66,5 @@ const setNum = req.params.num_demo;
         res.status(404).sendFile(path.join(__dirname, "views/404.html"));
     });
 });
+
+module.exports = app;
