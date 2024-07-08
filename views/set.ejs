@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <!--NAV BAR-->
+    <%- include('partials/navbar', {page: '' }) %>
+
+
+
+        <div class="container mx-auto">
+            <!-- Grid system -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <!-- CARD1 -->
+                <div class="hero min-h-screen bg-base-200">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div>
+                            <h1 class="text-5xl font-bold">
+                                <%=set.name%>
+                            </h1>
+                            <p class="py-6">Year Released: <%=set.year%>
+                            </p>
+                            <p class="py-6">Theme: <%=set.theme%>
+                            </p>
+                            <p class="py-6">Number of Parts: <%=set.num_parts%>
+                            </p>
+                            <p class="py-6">Set Name: <%=set.name%>
+                            </p>
+                            <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD2 -->
+                <div class="hero min-h-screen bg-base-200">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <img src="<%=set.img_url%>" class="max-w-sm rounded-lg" />
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                // Fetch the random quote
+                                fetch('https://cors-anywhere.herokuapp.com/https://favqs.com/api/qotd')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Update the DOM with the quote content and author
+                                        document.getElementById('quote').textContent = data.quote.body;
+                                        document.getElementById('author').textContent = `— ${data.quote.author}`;
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching the quote:', error);
+                                        document.getElementById('quote').textContent = 'Check Console for error.';
+                                    });
+                            });
+                        </script>
+
+                        <div id="quote-container">
+                            <p id="quote"></p>
+                            <p id="author"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>

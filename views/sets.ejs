@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Sets</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <!--NAV BAR-->
+    <%- include('partials/navbar') , {page: '/lego/sets' }%>
+
+
+        <!--404-->
+        <div class="hero min-h-screen">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div>
+                    <h1 class="mb-5 text-5xl font-bold">lego Sets</h1>
+                    <a class="btn btn-primary <%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets?theme=Icons">Icons</a>
+                    <a class="btn btn-primary <%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets?theme=technic">Technic</a>
+                    <a class="btn btn-primary <%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets?theme=Early Creator">Early Creator</a>   
+                    <div class="overflow-x-auto">
+                        <table class="table table-zebra">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Year</th>
+                                    <th>Theme</th>
+                                    <th>Parts</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (const set of sets){ %>
+                                    <!-- row 1 -->
+                                    <tr>
+                                        <th>
+                                            <div class="avatar">
+                                                <div class="w-24 rounded">
+                                                    <img src=<%=set.img_url%> />
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <%=set.name%>
+                                        </th>
+                                        <td>
+                                            <%=set.year%>
+                                        </td>
+                                        <td>
+                                            <%=set.theme%>
+                                        </td>
+                                        <td>
+                                            <%=set.num_parts%>
+                                        </td>
+                                        <td><a class="btn btn-primary" href="/lego/sets/<%=set.set_num%> "> Details </a>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
