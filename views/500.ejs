@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <!--NAV BAR-->
+    <%- include('partials/navbar',{page: '505' }) %>
+
+        <!--404-->
+        <div class="hero min-h-screen"
+            style="background-image: url(https://www.lego.com/cdn/cs/local-news/assets/blt85e9337b7a539d97/404.jpg?disable=upscale&width=1056&quality=50);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">500~</h1>
+                    <p class="mb-5"><%=msg%></p>
+                    <a class="btn btn-primary" href="/">Back to Home</a>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
