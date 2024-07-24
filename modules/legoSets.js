@@ -208,4 +208,5 @@ module.exports = {
   addSet,
   getAllThemes,
   deleteSet,
+  editSet
 };

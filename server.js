@@ -43,7 +43,7 @@ app.get("/lego/addSet", (req, res) => {
     })
     .catch((error) => {
       console.error("Error fetching themes:", error);
-      res.status(500).render("500", { msg: "Internal Server Error" });
+      res.render("500", { msg: "Internal Server Error" });
     });
 });
 
