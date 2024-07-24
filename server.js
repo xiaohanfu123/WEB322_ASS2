@@ -17,8 +17,9 @@ const app = express();
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, "public")));
-express.urlencoded({ extended: true });
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 app.set("views", path.join(__dirname, "views")); //set path of 'views'
 app.set("view engine", "ejs");
 
@@ -125,13 +126,16 @@ app.get("/lego/editSet/:num", (req, res) => {
 });
 
 app.post("/lego/editSet", (req, res) => {
+
+  
+
   const set_num = req.body.set_num; // Capture the set_num from the form data
   const setData = req.body; // Capture the form data in setData
 
   legoData
-    .editSet(set_num, setData) // Pass set_num and setData as parameters to the editSet function
+    .editSet(set_num, setData) // Pass set_num and setData 
     .then(() => {
-      res.redirect("/lego/sets"); // Redirect to the list of sets or another appropriate page
+      res.redirect("/lego/sets"); // Redirect to the list of sets 
     })
     .catch((error) => {
       console.error("Error editing set:", error);

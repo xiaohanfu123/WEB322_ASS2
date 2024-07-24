@@ -171,7 +171,7 @@ function editSet(set_num, setData) {
         }
       })
       .catch((err) => {
-        reject("An error occurred: " + err.errors[0].message);
+        reject("An error occurred: " + err);
       });
   });
 }
