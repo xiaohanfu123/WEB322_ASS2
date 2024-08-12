@@ -32,8 +32,12 @@
                             </p>
                             <p class="py-6">Set Name: <%=set.name%>
                             </p>
-                            <a class="btn btn-success" href="/lego/editSet/<%=set.set_num%>">Edit set</a>
-                            <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
+                            <% if(session.user){ %> <a class="btn btn-success"
+                                    href="/lego/editSet/<%=set.set_num%>">Edit set</a>
+                                <% } %>
+
+                                    <a class="btn btn-primary" href="#"
+                                        onclick="history.back(); return false;">Return</a>
                         </div>
                     </div>
                 </div>
